@@ -1,0 +1,75 @@
+{
+  "name": "quicorrupti",
+  "description": "Package for connecting with Ethereum wallets for dApp",
+  "scripts": {
+    "clean": "lerna clean --yes && lerna exec -- rm -rf dist/ && rm -rf node_modules",
+    "build": "lerna run build",
+    "start": "lerna run --parallel --no-bail start -- -- --verbose --noClean",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "link-all": "lerna exec -- yarn link"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TraceBeier/quicorrupti.git"
+  },
+  "keywords": [
+    "eum",
+    "quis",
+    "molestias",
+    "voluptatem",
+    "walletconnect",
+    "qui",
+    "bitski",
+    "quam"
+  ],
+  "author": "DestineyCronin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TraceBeier/quicorrupti.git/issues"
+  },
+  "homepage": "https://github.com/TraceBeier/quicorrupti.git",
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/jest": "^24.0.23",
+    "@types/node": "12.12.14",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.28",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-typescript": "^6.3.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lerna": "^3.19.0",
+    "prettier": "^2.1.1",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.5.0",
+    "tsdx": "^0.12.3",
+    "typescript": "^3.9.7"
+  },
+  "version": "1.0.0"
+}
